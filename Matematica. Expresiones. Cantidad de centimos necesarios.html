@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matematica. Cantidad de centimos necesarios</title>
+</head>
+<body>
+    <script>
+       let amount = 124;
+       console.log("A devolver :" + " " + amount + " centimos");
+       let coins = parseInt(amount / 50);
+       console.log(coins + ' monedas de 50 céntimos');
+       let rest50 = parseInt(amount % 50);
+       console.log(parseInt(rest50 / 20) + ' monedas de 20 céntimos');
+       let rest20 = parseInt(rest50 % 20);
+       console.log(parseInt(rest20 / 10) + ' monedas de 10 céntimos');
+       let rest10 = (rest20 % 10);
+       console.log(parseInt(rest20 / 5) + ' monedas de 5 céntimos');
+       let rest5 = parseInt(rest10 % 5);
+       console.log(parseInt(rest5 / 2) + ' monedas de 2 céntimos');
+       let rest2 = parseInt(rest5 % 2);
+       console.log(parseInt(rest2 / 1) + " monedas de 1 céntimos") 
+    </script>
+</body>
+</html>

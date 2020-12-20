@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matematica. Tipos de triangulo. Version1</title>
+</head>
+<body>
+    <script>
+        {
+            function getMaximum(x, y, z) {
+                let mayor;
+                if (x >= y) {
+                    mayor = x;
+                } else {
+                    mayor = y;
+                }
+                if (z >= mayor) {
+                    mayor = z;
+                }
+                return mayor;
+            }
+            function getIsTriangle(x, y, z) {
+                let maximum = getMaximum(x, y, z);
+                return maximum < (x + y + z) - maximum;
+            }
+            function getTriangleType(x, y, z) {
+                if (x == y && y == z) {
+                    return "equilatero";
+                } else if (x == y || y == z || z == x) {
+                    return "isosceles";
+                } else {
+                    return "escaleno";
+                }
+            }
+            let a = 240;
+            let b = 24;
+            let c = 24;
+            let msg = "Los lados " + a + ", " + b + " y " + c + " ";
+            let isTriangle = getIsTriangle(a, b, c);
+            if (!isTriangle) {
+                msg += "NO ";
+            }
+            msg += "forman un triangulo ";
+            if (isTriangle) {
+                msg += getTriangleType(a, b, c);
+            }
+            console.log(msg);
+        }
+    </script>
+</body>
+</html>

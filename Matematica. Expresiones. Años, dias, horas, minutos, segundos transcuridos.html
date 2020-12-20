@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matematica. Años, dias, horas, minutos, segundos transcuridos</title>
+</head>
+<body>
+    <script>
+    {
+       let day1 = 29;
+       let months1 = 7;
+       let year1 = 1947;
+       let day2 = 22;
+       let months2 = 12;
+       let year2 = 2020;
+       let days1 = (year1 - 1) * 360 + (months1 - 1) * 30 + day1;
+       let days2 = (year2 - 1) * 360 + (months2 - 1) * 30 + day2;
+       let allDays = days2 - days1;
+       console.log(parseInt(allDays / 360) + " años transcuridos");
+       console.log(parseInt(allDays / 30) + " meses transcuridos");
+       console.log(allDays + " dias transcuridos");
+       console.log(allDays * 24 + " horas transcuridos");
+       console.log(allDays * 24 * 60 + " minutos transcuridos");
+       console.log(allDays * 24 * 60 * 60 + " segundos transcuridos"); 
+    }
+    </script>
+</body>
+</html>

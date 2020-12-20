@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matematica. Tipos de Triangulo. Version1</title>
+  </head>
+  <body>
+    <script>
+      {
+      let a = 24;
+      let b = 34;
+      let c = 3;
+      let mayor;
+      if (a >= b && a >= c) {
+        mayor = a;
+      } else if (b >= a && b >= c) {
+        mayor = b;
+      } else {
+        mayor = c;
+      }
+      let esTriangulo = mayor < a + b + c - mayor;
+      let msg = "Los lados " + a + ", " + b + " y " + c;
+      if (!esTriangulo) {
+        msg += " NO";
+      }
+      msg += " forman un triangulo";
+      if (esTriangulo) {
+        if (a == b) {
+          if (a == c) {
+            msg += " equilatero";
+          } else {
+            msg += " isosceles";
+          }
+        } else {
+          if (b == c) {
+            msg += " isosceles";
+          } else {
+            msg += " escaleno";
+          }
+        }
+      }
+      console.log(msg);
+      }
+    </script>
+  </body>
+</html>

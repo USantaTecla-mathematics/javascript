@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matematica. Numero primo. Version4</title>
+  </head>
+  <body>
+    <script>
+      {
+        function prime(number) {
+          for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+              return false;
+            }
+          }
+          return true;
+        }
+        let sumPrimes = 0;
+        for (let i = 1; i <= 10; i++) {
+          if (prime(i)) {
+            sumPrimes += i;
+          }
+        }
+        console.log("Suma de primos en los 10 primeros números:" + sumPrimes);
+        let magnitude = 1;
+        for (let primes = 0; primes < 10; primes++) {
+          while (!prime(magnitude)) {
+            magnitude++;
+          }
+          sumPrimes += magnitude;
+          magnitude++;
+        }
+        console.log("Suma de los 10 primeros primos:" + sumPrimes);
+      }
+    </script>
+  </body>
+</html>

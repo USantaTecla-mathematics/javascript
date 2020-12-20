@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matematica. Conversor numerico 2 a 10. Version2</title>
+  </head>
+  <body>
+    <script>
+      {
+        function toDecimalValue(binary) {
+          let numberRemaining = binary;
+          let position = 0;
+          let decimalNumber = 0;
+          let currentNumber;
+          while (numberRemaining > 0) {
+            currentNumber = numberRemaining % 10;
+            decimalNumber += currentNumber * 2 ** position;
+            numberRemaining = parseInt(numberRemaining / 10);
+            position++;
+          }
+          return decimalNumber;
+        }
+
+        console.log(toDecimalValue(101100110));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matematica. Si son amigos</title>
+</head>
+<body>
+    <script>
+        {
+            let number1 = 220;
+            let number2 = 284;
+            let acu = 0;
+            let acu2 = 0;
+
+            for (let i = 1; i < number1; i++) {
+                if (number1 % i == 0) {
+                    acu += i;
+                }
+            }
+            console.log(acu);
+
+            for (let j = 1; j < number2; j++) {
+                if (number2 % j == 0) {
+                    acu2 += j;
+                }
+            }
+            console.log(acu2);
+
+            let msg = number1 + " y " + number2 + " ";
+            if (number1 == acu2 && number2 == acu) {
+                msg += "SI";
+            } else {
+                msg += "NO";
+            }
+            console.log(msg + " son mumeros amigos");
+        }
+    </script>
+</body>
+</html>
