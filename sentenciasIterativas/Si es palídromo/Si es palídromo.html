@@ -2,26 +2,8 @@
 <html>
 <head>
   <title>Matematica. Si es palídromo</title>
+  <script src="Si es palidromo.js"></script>
 </head>
 <body>
-  <script>
-    {
-      let number = 123454321;
-      let msg = "El numero " + number + " y ";
-      let digits = number;
-      let inverse = 0;
-      do {
-        inverse = inverse * 10 + digits % 10;
-        digits = parseInt(digits / 10);
-      } while (digits > 0);
-      msg += inverse + " ";
-      if (number == inverse) {
-        msg += "SI";
-      } else {
-        msg += "NO"; 
-      }
-      console.log(msg + " son palidromos");
-    }
-  </script>
 </body>
 </html>
